@@ -1,0 +1,114 @@
+:root {
+    --light-body: #caf1ff;
+    --light-text: #0f0539;
+    --light-icon: #fdbb13;
+    --light-switch: #fafcff;
+    --light-heading: #2b3757;
+
+    --dark-body: #070111;
+    --dark-text: #fafcff;
+    --dark-icon: #fdbb13;
+    --dark-switch: #0f0539;
+    --dark-heading: #5228ff;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    box-sizing: border-box;
+}
+
+.theme-screen {
+    background: var(--light-body);
+    transition: all linear .4s;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.toggle-switch {
+    width: 160px;
+    height: 60px;
+    border-radius: 100px;
+    padding: 0px 20px;
+    margin: 0px 50px;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--light-switch);
+    box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.08);
+    transition: all linear .4s;
+}
+
+.toggle-switch i {
+    font-size: 90px;
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    color: var(--light-icon);
+    transform: translateY(-50%) rotate(0deg);
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.10);
+    transition: all linear .5s;
+}
+
+.toggle-switch span {
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.switch-light {
+    color: var(--light-text);
+}
+
+.switch-dark {
+    color: var(--dark-text);
+}
+
+.heading {
+    width: 850px;
+    font-size: 60px;
+    line-height: 70px;
+    margin-top: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Heebo', sans-serif;
+    text-transform: uppercase;
+    color: var(--light-heading);
+    transition: all linear .4s;
+}
+
+
+/* dark mode style */
+.dark-mode {
+    background: var(--dark-body);
+}
+
+.dark-mode .text {
+    color: var(--dark-text);
+}
+
+.dark-mode .toggle-switch {
+    background: var(--dark-switch);
+}
+
+.dark-mode i {
+    left: 85px;
+    color: var(--dark-icon);
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.dark-mode .heading {
+    color: var(--dark-heading);
+}
